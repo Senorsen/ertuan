@@ -1,0 +1,26 @@
+<div id="menu-layer" style="width:100%;height:100%;left:0;top:0;position:absolute;"></div>
+<script>
+var this_pce={
+	start:function(){
+		var menus=[[498,65,444,60],[498,133,444,60],[498,197,444,60],[498,273,317,37],[498,321,317,37],[498,369,317,37],[498,419,317,37],[498,473,317,37]];
+		for(i in menus)
+		{
+			$('#menu-layer').append('<div onclick="page_controller.gotoPage('+(parseInt(i)+1+1)+')" style="left:'+menus[i][0]+'px;top:'+menus[i][1]+'px;width:'+menus[i][2]+'px;height:'+menus[i][3]+'px;cursor:pointer;position:absolute;background-color:white;opacity:0.1;filter:alpha(opacity:10);" onmouseover="$(this).animate({opacity:\'0.5\'},100).css({filter:\'alpha(opacity=50)\'})" onmouseout="$(this).animate({opacity:\'0.1\'},100).css({filter:\'alpha(opacity=10)\'})"></div>');
+		}
+	},
+	end:function(){
+		
+	}
+}
+</script>
+<script>
+//以下为固定内容
+page_controller.page_cb_init=function()
+{
+	//暂无内容……
+	page_controller.pce=this_pce;
+}
+if(!page_controller.___preview_mode) page_controller.__page_dom_ready();
+//后边不允许有任何内容！
+//by :  zhs (Sensor) , 2013年8月30日14:34:13
+</script>

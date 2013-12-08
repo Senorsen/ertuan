@@ -1,0 +1,41 @@
+<div style="left:7px;top:125px;width:467px;height:292px;">
+<div id="pic-slider" class="nivoSlider theme-bar" style="width:467px;height:292px;"></div>
+</div>
+<div class="scroll" style="left:495px;top:19px;width:445px;height:510px"> 你问我什么是战士的生活，我送你一枚小弹壳……<br />
+  　　　　　　　　黎明行军--向前向前向前<br />
+  　　8月31日2点40分，一弯下弦月还悬挂在半空，晨星依稀可见。在急冲冲地集完合后，二团全体战士坐上前往拉练的汽车向西溪湿地公园文二西路福堤入口进发，从这里，战士们将走向打靶场地--浙江工商大学人民武装学院，开始4公里多的徒步拉练。<br />
+  　　拉练途中，战士们每个人都对射击充满了期待，还掺杂这些许紧张。路程虽未及想象中那么远，也毕竟考验人的耐心。教官一路上都鼓励大家：“快到了，前面就是啦！”战士们迈开大步向前走着，不知多少个“快到了”之后，终于来到了我们的目的地--人民武装学院打靶场。<br />
+  　　　　　　　　枪声四起硝烟漫<br />
+  　　“发子弹！”大家接过子弹，神圣的感觉油然而生。“上靶位！”口令一下，20位战士卧好在各自靶位上。教官们接过战士手中的子弹，熟练地装入弹夹，凌厉地上了膛。“别急，慢慢来！”战士们小心翼翼地握住枪托，举起枪管，标尺、准星，目标渐渐靠拢到一条直线……扣下扳机--“砰！”只见对面一阵白烟升起，余声未消，退子弹的口令就急促地响起。战士们起身后，教官对战士们微微点了下头，拾起一枚放到战士手中，又埋下头继续准备下一组的射击。<br />
+  　　　　　　　　弹无虚发--神枪手喜获嘉奖<br />
+  　　全连完成射击后，四位同学表现神勇，其中三位女生巾帼不让须眉，得到了四十环以上的成绩，喜获神枪手称号，更赢得了大家羡慕的目光和赞赏的掌声。军训师政委严建华亲自为他们佩戴了“神枪手”绶带并一一敬礼握手祝贺。<br />
+  　　愉快的拉练时光马上就过去了，当大家恋恋不舍地离开靶场时，只听到打靶场上依旧回荡着令人热血沸腾的枪响，耳边似乎响起了那熟悉的歌声：“你问我什么是战士的生活，我送你一枚小弹壳……”<br />
+　　不知道什么时候在触摸那神圣的枪身，又或许永远不会再打靶了。只是这份记忆会永远留存在每一位战士的心中，伴着那枚泛着暗金色光芒的弹壳。</div>
+<script>
+//这个必须有！
+var this_pce={
+	start:function(){
+		$pic_slider=$('#pic-slider');
+		for(var i in page_controller.res_list_p[pda.page_id])
+		{
+			if(page_controller.res_list_p[pda.page_id][i]['type']=='img')
+				$pic_slider.append('<img src="'+page_controller.res_list_p[pda.page_id][i]['url']+'">');
+		}
+		$pic_slider.nivoSlider({effect:'fade',prevText:"上一张",nextText:"下一张",controlNavThumbs:true,pauseTime:2000,animSpeed:500,pauseOnHover:false});
+	},
+	end:function(){
+		//alert('再见！');
+	}
+}
+</script>
+<script>
+//以下为固定内容
+page_controller.page_cb_init=function()
+{
+	//暂无内容……
+	page_controller.pce=this_pce;
+}
+if(!page_controller.___preview_mode) page_controller.__page_dom_ready();
+//后边不允许有任何内容！
+//by :  zhs (Sensor) , 2013年8月30日14:34:13
+</script>

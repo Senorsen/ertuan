@@ -1,0 +1,30 @@
+<div class="" style="width:828px;height:424px;top:182px;left:61px"><div id="pic-slider" class="nivoSlider theme-bar" style="height:424px;width:828px"></div></div>
+<script>
+//这个必须有！
+var this_pce={
+	start:function(){
+		var pic_num=14;
+		$pic_slider=$('#pic-slider');
+		for(var i in page_controller.res_list_p[pda.page_id])
+		{
+			if(page_controller.res_list_p[pda.page_id][i]['type']=='img')
+				$pic_slider.append('<img src="'+page_controller.res_list_p[pda.page_id][i]['url']+'">');
+		}
+		$pic_slider.nivoSlider({effect:'fade',prevText:"上一张",nextText:"下一张",controlNavThumbs:true,pauseTime:2000,animSpeed:300,pauseOnHover:false});
+	},
+	end:function(){
+		//alert('再见！');
+	}
+}
+</script>
+<script>
+//以下为固定内容
+page_controller.page_cb_init=function()
+{
+	//暂无内容……
+	page_controller.pce=this_pce;
+}
+if(!page_controller.___preview_mode) page_controller.__page_dom_ready();
+//后边不允许有任何内容！
+//by :  zhs (Sensor) , 2013年8月30日14:34:13
+</script>

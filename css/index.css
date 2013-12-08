@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family:Microsoft Yahei,Yahei,微软雅黑,幼圆;
+	font-size:14px;
+	background-color:#000;
+}
+
+#container {
+	width:1290px;
+	margin-top:0px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#main-layer {
+	width:950px;
+	height:650px;
+	left:50%;
+	margin-left:-475px;
+	top:50%;
+	margin-top:-330px;
+	padding:0 0 0 0;
+	box-shadow: 0 0 10px rgba(255,255,255,0.3);
+	background-color: rgba(255,255,255,0.1);
+	z-index:50;
+	position:fixed;
+}
+
+#content-layer {
+	position:absolute;
+	width:100%;
+	height:100%;
+	text-align:left;
+	font-size:16px
+}
+
+#main-video-layer{
+	width:1280px;
+	height:720px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-left:-640px;
+	margin-top:-360px;
+	background-color: rgba(255,255,255,0.7);
+	z-index:100;
+}
+
+#page_id_layer {
+	opacity:0.7;
+	font-size:14px;
+	position:absolute;
+	right:6px;
+	bottom:6px;
+	z-index:55;
+	color:white;
+	background-color:#666;
+	border-radius:4px;
+	border: #333 solid 1px;
+	font-family:Verdana, Geneva, sans-serif;
+	padding:1px 4px 1px 4px;
+}
+
+#page_layer {
+	width:950px;
+	height:650px;
+	left:0;
+	top:0;
+}
+
+#controller-layer {
+	position:fixed;
+	bottom:60px;
+	right:40px;
+	z-index:150;
+	cursor:pointer;
+	padding:0;
+	margin:0;
+}
+.controller-button {
+	padding:0;
+	margin:3px 3px 3px 3px;
+	opacity:0.2;
+	width:48px;
+	height:48px;
+	z-index:200;
+}
+#controller-first {background:url(../img/first.png)}
+#controller-end {background:url(../img/end.png)}
+#controller-next {background:url(../img/next.png)}
+#controller-prev {background:url(../img/prev.png)}
+#controller-menu {background:url(../img/menu.png)}
+#controller-fullscreen {background:url(../img/fullscreen.png)}
+
+#bgpic-layer {
+	width:950px;
+	height:650px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:auto;
+	margin-bottom:auto;
+	position:absolute;
+}
+
+
+/* 以下抄自 http://blog.csdn.net/zhongweijian/article/details/9005485 */
+html:-moz-full-screen {
+	background: #000000;
+}
+
+html:-webkit-full-screen {
+	background: #000000;
+}
+
+html:fullscreen {
+	background: #000000;
+}
+/********************************************************************/
+
+.alert {
+	text-shadow:5px 5px 5px #ffffff;
+	border:dashed 5px #000000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	position:fixed;
+	z-index:1000;
+	top:50%;
+	left:50%;
+	width:400px;
+	height:50px;
+	margin-left:-200px;
+	margin-top:-25px;
+	text-align:center;
+	display:none;
+	padding-top:26px;
+	font-size:15px;
+	background-color:#333;
+	cursor:pointer;
+	color:#eeeeee;
+}
+
+.scroll {
+	display:block;
+	white-space:normal;
+	word-break:break-all;
+	word-wrap:break-word;
+	overflow-y:hidden;
+	overflow:hidden;
+	position:absolute;
+	padding:6px 6px 6px 6px;
+}
+.scroll>.ps-scrollbar-x {
+	display:none;
+}
+#content-layer>div {
+	position:absolute;
+	font-size:18px;
+}

@@ -1,0 +1,23 @@
+
+<script>
+//这个必须有！
+var this_pce={
+	start:function(){
+		//alert('回调函数！');
+	},
+	end:function(){
+		//alert('再见！');
+	}
+}
+</script>
+<script>
+//以下为固定内容
+page_controller.page_cb_init=function()
+{
+	//暂无内容……
+	page_controller.pce=this_pce;
+}
+if(!page_controller.___preview_mode) page_controller.__page_dom_ready();
+//后边不允许有任何内容！
+//by :  zhs (Sensor) , 2013年8月30日14:34:13
+</script>
